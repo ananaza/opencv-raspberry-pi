@@ -1,8 +1,3 @@
-#from picamera import PiCamera
-from time import sleep
-import sys
-
-sys.path.append('/usr/local/lib/python2.7/site-packages')
 import cv2
 import numpy as np
 
@@ -25,7 +20,4 @@ cap.release()
 cv2.destroyAllWindows()
 
 
-#camera = PiCamera()
-#camera.start_preview()
-#sleep(10)
-#camera.stop_preview()
+
