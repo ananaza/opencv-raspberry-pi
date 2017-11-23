@@ -4,12 +4,13 @@ import numpy as np
 cap = cv2.VideoCapture(0)
 
 while True:
-	_, frame = cap.read()
+	ret, frame = cap.read()
+
 	# hue saturation value
 	hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-	lower_red = np.array([150,150,50])
-	upper_red = np.array([180,255,150])
+	lower_red = np.array([244,194,194])
+	upper_red = np.array([128,0,0])
 
 	#maskataan parametrien perusteella
 	mask = cv2.inRange(hsv, lower_red, upper_red)
@@ -21,7 +22,7 @@ while True:
 
 
 
-	if(cv2.waitKey(0)):
+	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
 
 cv2.destroyAllWindows()

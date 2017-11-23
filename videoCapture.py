@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 #cap = cv2.VideoCapture("/home/pi/Desktop/output.jpg")
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 if cap.isOpened() == False:
     print ("VideoCapture failed")
